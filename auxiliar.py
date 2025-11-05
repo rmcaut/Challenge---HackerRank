@@ -1,15 +1,18 @@
-def merge_the_tools(string, k):
-    # your code goes here
-    string_list = [c for c in string]
-    print(k)
-    num_blocks = len(string_list) // k
-    print(num_blocks)
-    for i in range(num_blocks):
-        block_list = string_list[i*k:(i+1)*k]
-        print(block_list)
-        block_substring = ''.join(block_list)
-        print(block_substring)
+# Generate an alphabet list
+# alph = list(map(chr, range(97, 123)))
+# for c in alph:
+#     print(c.lower(), end='')
 
+# Rangoli
+def print_rangoli(size):
+    alph = list(map(chr, range(97, 123)))
+    alph_lower = [c.lower() for c in alph]
+    for rows_upper in range(1, size - 1): 
+        print('-'*2*(size - rows_upper), end='')
+        for l in range(1, rows_upper):
+            print(alph_lower[size - l]+'-', end='')
+        
+     
 if __name__ == '__main__':
-    string, k = input(), int(input())
-    merge_the_tools(string, k)
+    n = int(input())
+    print_rangoli(n)
