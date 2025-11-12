@@ -17,3 +17,5 @@ for combo in combination:
         # print(ix)
         if en_letters[ix] == 'a':
             counter_contains += 1
+            break
+print(counter_contains / counter_combo)
